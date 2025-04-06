@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 'use client';
 
 import { useState } from 'react';
@@ -75,8 +74,8 @@ const MeetingTypeList = () => {
         <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
             <HomeCard
                 img="/icons/add-meeting.svg"
-                title="New Meeting"
-                description="Start an instant meeting"
+                title="New Video Call"
+                description="Start an instant Video Call"
                 className="bg-green-500"
                 handleClick={() => setMeetingState('isInstantMeeting')}
             />
@@ -98,7 +97,7 @@ const MeetingTypeList = () => {
                 img="/icons/recordings.svg"
                 title="View Recordings"
                 description="Meeting Recordings"
-                className="bg-yellow-200"
+                className="bg-purple-500"
                 handleClick={() => router.push('/recordings')}
             />
 

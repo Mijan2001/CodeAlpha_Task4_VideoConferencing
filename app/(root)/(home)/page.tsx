@@ -17,7 +17,7 @@ const Home = () => {
             <div className="h-[300px] w-full rounded-[20px] hero bg-cover bg-center">
                 <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
                     <h2 className="max-w-[270px] rounded-md py-2 text-center text-base font-normal bg-gray-50">
-                        Upcoming Meeting at : 12:30
+                        Upcoming Meeting
                     </h2>
                     <div className="flex flex-col gap-2">
                         <h1 className="text-4xl text-white font-extrabold lg:text-7xl">
@@ -30,7 +30,7 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Metting type list===============  */}
+            {/* video conference type list===============  */}
             <MeetingTypeList />
         </section>
     );

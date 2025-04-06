@@ -16,7 +16,7 @@ const Navbar = () => {
                     className="max-sm:size-10"
                 />
                 <p className="font-extrabold text-white max-sm:hidden">
-                    VIDEO CONFERENCING
+                    VIDEO CONFERENCE
                 </p>
             </Link>
             <div className="flex justify-between items-center gap-5">

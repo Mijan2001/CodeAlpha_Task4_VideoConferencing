@@ -14,7 +14,6 @@ const EndCallButton = () => {
             'useStreamCall must be used within a StreamCall component.'
         );
 
-    // https://getstream.io/video/docs/react/guides/call-and-participant-state/#participant-state-3
     const { useLocalParticipant } = useCallStateHooks();
     const localParticipant = useLocalParticipant();
 
@@ -32,7 +31,7 @@ const EndCallButton = () => {
 
     return (
         <Button onClick={endCall} className="bg-red-500">
-            End call for everyone
+            End Call
         </Button>
     );
 };

@@ -60,7 +60,7 @@ const MeetingCard = ({
                     </div>
                 </div>
                 {!isPreviousMeeting && (
-                    <div className="flex gap-2">
+                    <div className="flex pr-5 gap-2">
                         <Button
                             onClick={handleClick}
                             className="rounded cursor-pointer bg-blue-500 px-6"

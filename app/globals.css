@@ -5,7 +5,7 @@
 
 .hero {
     @apply bg-cover bg-no-repeat bg-center;
-    background-image: url('/images/hero-background.png');
+    background-image: url('/images/feature-banner.jpg');
 }
 
 @theme inline {

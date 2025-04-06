@@ -34,13 +34,6 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
         }
     }, [user, isLoaded]);
 
-    // if (!videoClient) {
-    //     return <Loader />;
-    // }
-
-    console.log('videoClient==>', videoClient); //why videoclient is undefined
-    console.log('user==>', user); //why user is undefined
-
     if (!videoClient) {
         return <Loader />;
     }

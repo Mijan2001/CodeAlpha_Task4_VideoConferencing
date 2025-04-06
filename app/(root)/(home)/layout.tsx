@@ -5,8 +5,9 @@ import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
-    title: 'YOOM',
-    description: 'A workspace for your team, powered by Stream Chat and Clerk.'
+    title: 'VIDEO CONFERENCE APP',
+    description:
+        'A video conference app built with Next.js and Stream Video SDK'
 };
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
