@@ -14,7 +14,7 @@ import MeetingRoom from '@/components/MeetingRoom';
 const MeetingPage = () => {
     const { id } = useParams();
     const { isLoaded, user } = useUser();
-    const { call, isCallLoading } = useGetCallById(id);
+    const { call, isCallLoading } = useGetCallById(id || '');
     const [isSetupComplete, setIsSetupComplete] = useState(false);
 
     if (!isLoaded || isCallLoading)
@@ -29,7 +29,7 @@ const MeetingPage = () => {
             <div className="flex h-screen items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
                 <div className="rounded-2xl backdrop-blur-sm bg-white/10 p-10 shadow-2xl text-center">
                     <p className="text-3xl font-bold text-red-500">
-                        ❌ Call Not Found
+                        Call Not Found
                     </p>
                 </div>
             </div>

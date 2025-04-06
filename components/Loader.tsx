@@ -15,10 +15,10 @@ const Loader = () => {
                     />
                 </div>
                 <p className="text-gray-700 text-xl font-semibold">
-                    Loading, please wait...
+                    Loading please wait...
                 </p>
                 <p className="text-gray-500 text-sm">
-                    We're preparing everything for you.
+                    We are preparing everything for you.
                 </p>
             </div>
         </div>
