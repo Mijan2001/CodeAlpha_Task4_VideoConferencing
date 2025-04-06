@@ -2,6 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import MobileNav from './MobileNav';
+import {
+    ClerkProvider,
+    SignInButton,
+    SignUpButton,
+    SignedIn,
+    SignedOut,
+    UserButton
+} from '@clerk/nextjs';
 
 const Navbar = () => {
     return (
@@ -21,6 +29,9 @@ const Navbar = () => {
 
             <div className="flex justify-between gap-5">
                 {/* Clerk user management ============  */}
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
                 <MobileNav />
             </div>
         </nav>

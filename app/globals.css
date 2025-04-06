@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.hero {
+    @apply bg-cover bg-no-repeat bg-center;
+    background-image: url('/images/hero-background.png');
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -119,4 +124,13 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+.cl-providerIcon__github {
+    filter: invert(1);
+}
+
+.cl-dividerLine {
+    background: #4c5a96;
+    height: 2px;
 }
