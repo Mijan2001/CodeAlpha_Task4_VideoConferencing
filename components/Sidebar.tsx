@@ -1,44 +1,56 @@
 'use client';
-
-import { sidebarLinks } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+
+import { sidebarLinks } from '@/constants';
+import { cn } from '@/lib/utils';
 
 const Sidebar = () => {
     const pathname = usePathname();
+
     return (
-        <section className="sticky left-0 top-0 flex flex-col h-screen justify-between w-fit bg-gray-300 p-6 pt-28 max-sm:hidden lg:w-[264px] ">
-            <div className="flex flex-col gap-6">
-                {sidebarLinks?.map(link => {
+        <aside className="sticky top-0 left-0 h-screen max-sm:hidden lg:w-[264px] flex flex-col justify-between bg-gradient-to-b from-[#1E293B] to-[#0F172A] p-6 pt-28 text-white shadow-lg">
+            <div className="flex flex-col gap-4">
+                {sidebarLinks.map(item => {
                     const isActive =
-                        pathname === link.route ||
-                        pathname.startsWith(`${link.route}/`);
+                        pathname === item.route ||
+                        pathname.startsWith(`${item.route}/`);
+
                     return (
                         <Link
-                            key={link.label}
-                            href={link.route}
-                            className={`flex items-center gap-4 rounded-lg justify-start p-3 text-sm font-medium hover:bg-[#6571a0] ${
-                                isActive ? 'bg-[#4460dd]' : ''
-                            }`}
+                            href={item.route}
+                            key={item.label}
+                            className={cn(
+                                'flex items-center gap-4 p-3 rounded-md transition-all duration-300 hover:bg-blue-600/20 hover:scale-[1.02]',
+                                {
+                                    'bg-blue-600 text-white shadow-md':
+                                        isActive,
+                                    'text-gray-300 hover:text-white': !isActive
+                                }
+                            )}
                         >
-                            {/* style should be applied on image icons later =====  */}
                             <Image
-                                src={link.imgUrl}
-                                alt={link.label}
+                                src={item.imgURL}
+                                alt={item.label}
                                 width={24}
                                 height={24}
-                                className="bg-blue-500"
+                                className={cn(
+                                    'transition-all duration-300 bg-indigo-400 border',
+                                    {
+                                        'invert-0': isActive,
+                                        invert: !isActive
+                                    }
+                                )}
                             />
-                            <p className="text-lg font-semibold max-lg:hidden">
-                                {link.label}
-                            </p>
+                            <span className="text-base font-medium max-lg:hidden">
+                                {item.label}
+                            </span>
                         </Link>
                     );
                 })}
             </div>
-        </section>
+        </aside>
     );
 };
 

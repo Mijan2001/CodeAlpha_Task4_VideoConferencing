@@ -1,37 +1,29 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import { SignedIn, UserButton } from '@clerk/nextjs';
+
 import MobileNav from './MobileNav';
-import {
-    ClerkProvider,
-    SignInButton,
-    SignUpButton,
-    SignedIn,
-    SignedOut,
-    UserButton
-} from '@clerk/nextjs';
 
 const Navbar = () => {
     return (
-        <nav className="flex justify-between z-50 bg-gray-700 fixed top-0 left-0 right-0 w-full text-white px-6 py-4 lg:px-10">
-            <Link href="/" className="flex items-center gap-2">
+        <nav className=" flex justify-between items-center fixed z-50 w-full bg-gray-900 px-6 py-4 lg:px-10">
+            <Link href="/" className="flex items-center gap-1">
                 <Image
                     src="/icons/logo.svg"
-                    alt="logo"
                     width={32}
                     height={32}
+                    alt="yoom logo"
                     className="max-sm:size-10"
                 />
                 <p className="text-[26px] font-extrabold text-white max-sm:hidden">
-                    Video
+                    YOOM
                 </p>
             </Link>
-
-            <div className="flex justify-between gap-5">
-                {/* Clerk user management ============  */}
+            <div className="flex justify-between items-center gap-5">
                 <SignedIn>
-                    <UserButton />
+                    <UserButton afterSignOutUrl="/sign-in" />
                 </SignedIn>
+
                 <MobileNav />
             </div>
         </nav>

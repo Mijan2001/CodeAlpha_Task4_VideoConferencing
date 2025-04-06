@@ -1,11 +1,13 @@
-import React from 'react';
+import CallList from '@/components/CallList';
 
-const Recordings = () => {
+const PreviousPage = () => {
     return (
-        <section className="flex size-full flex-col gap-10 ">
-            <h1 className="text-3xl font-bold">recording</h1>
+        <section className="flex bg-gray-600 p-5 rounded-md text-white size-full flex-col gap-10 ">
+            <h1 className="text-3xl font-bold">Recordings</h1>
+
+            <CallList type="recordings" />
         </section>
     );
 };
 
-export default Recordings;
+export default PreviousPage;

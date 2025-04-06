@@ -1,74 +1,74 @@
 'use client';
 
-import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import {
     Sheet,
     SheetClose,
     SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
     SheetTrigger
 } from '@/components/ui/sheet';
-import Image from 'next/image';
-import Link from 'next/link';
 import { sidebarLinks } from '@/constants';
-import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 const MobileNav = () => {
     const pathname = usePathname();
+
     return (
         <section className="w-full max-w-[264px]">
             <Sheet>
                 <SheetTrigger asChild>
                     <Image
                         src="/icons/hamburger.svg"
-                        width={32}
-                        height={32}
-                        alt="hamburger"
+                        width={36}
+                        height={36}
+                        alt="hamburger icon"
                         className="cursor-pointer sm:hidden"
                     />
                 </SheetTrigger>
-                <SheetContent side="right" className="border-none">
-                    <Link href="/" className="flex items-center gap-2">
+                <SheetContent
+                    side="left"
+                    className="border-none p-5 bg-gray-900"
+                >
+                    <Link href="/" className="flex items-center gap-1">
                         <Image
                             src="/icons/logo.svg"
-                            alt="logo"
                             width={32}
                             height={32}
-                            className="max-sm:size-10"
+                            alt="yoom logo"
                         />
-                        <p className="text-[26px] font-extrabold text-white ">
-                            Video
+                        <p className="text-[26px] font-extrabold text-white">
+                            VIDEO
                         </p>
                     </Link>
-                    <div className="flex h-[calc(100vh - 72px)] flex-col  justify-between overflow-y-auto ">
+                    <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
                         <SheetClose asChild>
-                            <section className="flex h-full flex-col gap-6 py-16 ">
-                                {sidebarLinks?.map(link => {
-                                    const isActive = pathname === link.route;
+                            <section className=" flex h-full flex-col gap-6 pt-16 text-white">
+                                {sidebarLinks.map(item => {
+                                    const isActive = pathname === item.route;
+
                                     return (
-                                        <SheetClose asChild key={link.label}>
+                                        <SheetClose asChild key={item.route}>
                                             <Link
-                                                key={link.label}
-                                                href={link.route}
-                                                className={`flex items-center gap-4 rounded-lg  max-w-60 p-3 text-sm font-medium hover:bg-[#6571a0] ${
-                                                    isActive
-                                                        ? 'bg-[#4460dd]'
-                                                        : ''
-                                                }`}
+                                                href={item.route}
+                                                key={item.label}
+                                                className={cn(
+                                                    'flex gap-4 items-center p-4 rounded-lg w-full max-w-60 hover:bg-gray-500 transition-colors',
+                                                    {
+                                                        'bg-blue-600': isActive
+                                                    }
+                                                )}
                                             >
-                                                {/* style should be applied on image icons later =====  */}
                                                 <Image
-                                                    src={link.imgUrl}
-                                                    alt={link.label}
+                                                    src={item.imgURL}
+                                                    alt={item.label}
                                                     width={20}
                                                     height={20}
-                                                    className="bg-blue-500"
                                                 />
-                                                <p className="font-semibold ">
-                                                    {link.label}
+                                                <p className="font-semibold">
+                                                    {item.label}
                                                 </p>
                                             </Link>
                                         </SheetClose>
