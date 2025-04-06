@@ -1,12 +1,6 @@
-Video Conference Website
+**Video Conference Website**
 
 A professional video conferencing platform built with the latest Next.js 15 and TypeScript, integrating powerful features like real-time communication, meeting management, screen sharing, and recording — all wrapped in a sleek, responsive UI.
-
-project screenshots
-
-## 📸 Demo
-
-Here are some screenshots showcasing the app's features:
 
 ### Home Page
 
@@ -41,77 +35,69 @@ This project provides a secure and seamless video meeting experience. Users can 
 
 🔁 Real-time interaction
 
-⚙️ Tech Stack
-Technology Description
-Next.js Full-stack React framework
-TypeScript Typed JavaScript for better code quality
-Clerk Authentication and user management
-getstream Real-time video SDK
-shadcn/ui Beautiful and accessible UI components
-Tailwind CSS Utility-first CSS for rapid styling
-🚀 Features
-🔐 Authentication
-Secure login using Clerk, supporting social logins and email/password. User access levels are enforced for all functionalities.
+## ⚙️ Tech Stack
 
-🆕 New Meeting
-Quickly start a new meeting. Configure camera and microphone before joining.
+| Technology       | Description                              |
+| ---------------- | ---------------------------------------- |
+| **Next.js**      | Full-stack React framework               |
+| **TypeScript**   | Typed JavaScript for better code quality |
+| **Clerk**        | Authentication and user management       |
+| **getstream**    | Real-time video SDK                      |
+| **shadcn/ui**    | Beautiful and accessible UI components   |
+| **Tailwind CSS** | Utility-first CSS for rapid styling      |
 
-🎛️ Meeting Controls
-Gain full control with:
+## 🚀 Features
 
-🔴 Start/stop recording
+### 🔐 Authentication
 
-📺 Screen sharing
+-   Secure login powered by **Clerk**, supporting social logins and email/password.
+-   Enforces user access levels for all functionalities.
 
-🤫 Mute/unmute
+### 🆕 New Meeting
 
-🎉 Emoji reactions
+-   Start a meeting instantly with pre-join configuration for camera and microphone.
 
-🔊 Sound adjustments
+### 🎛️ Meeting Controls
 
-🧑‍🤝‍🧑 Grid view & participant list
+-   Comprehensive meeting management with features like:
+    -   🔴 Start/stop recording
+    -   📺 Screen sharing
+    -   🤫 Mute/unmute
+    -   🎉 Emoji reactions
+    -   🔊 Sound adjustments
+    -   🧑‍🤝‍🧑 Grid view & participant list
+    -   📌 Pin/unpin participants
+    -   ✋ Manage user permissions (block/unblock, allow screen share)
+    -   🏃 Exit or end meeting for all participants
 
-📌 Pin/unpin participants
+### 📆 Schedule Future Meetings
 
-✋ Manage user permissions (block/unblock, allow screen share)
+-   Plan meetings in advance with date and time.
+-   View scheduled meetings under “Upcoming Meetings” for quick access and sharing.
 
-🏃 Exit or End Meeting
-Participants can leave anytime, and creators can end the session for everyone.
+### 🕓 Past Meetings List
 
-📆 Schedule Future Meetings
-Plan ahead! Schedule meetings with date and time, visible under “Upcoming Meetings” for instant access and sharing.
+-   Access a detailed list of all previous meetings with metadata.
 
-🕓 Past Meetings List
-Check all your previous meetings with detailed metadata.
+### 🎞️ View Recorded Meetings
 
-🎞️ View Recorded Meetings
-Access and rewatch your recorded sessions.
+-   Rewatch recorded sessions anytime from the recordings archive.
 
-🧑‍💻 Personal Room
-Each user gets a personal meeting room with a shareable link for quick calls.
+### 🧑‍💻 Personal Room
 
-🔗 Join via Link
-Join any meeting instantly using a valid meeting link.
+-   Each user has a dedicated personal meeting room with a shareable link for quick calls.
 
-🔐 Secure & Real-time
-Built on Stream's real-time SDKs to ensure private, fast, and secure communication.
+### 🔗 Join via Link
 
-📱 Responsive Design
-Looks great on mobile, tablet, and desktop with a clean, responsive layout.
+-   Join meetings instantly using a valid meeting link.
 
-🤸 Quick Start
-✅ Prerequisites
-Make sure the following are installed:
+### 🔐 Secure & Real-time
 
-## ✅ Prerequisites
+-   Built on **Stream's real-time SDKs** for private, fast, and secure communication.
 
-Ensure the following tools are installed on your system before proceeding:
+### 📱 Responsive Design
 
--   **Git**: Version control system for cloning and managing the repository.
--   **Node.js**: JavaScript runtime for running the application.
--   **npm**: Node package manager for installing dependencies.
-
----
+-   Optimized for mobile, tablet, and desktop with a sleek, responsive layout.
 
 ## 📥 Clone the Repository
 
