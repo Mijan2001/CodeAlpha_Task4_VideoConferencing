@@ -49,10 +49,10 @@ const MeetingPage = () => {
         );
 
     return (
-        <main className="flex h-screen w-full items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <main className="flex px-2 w-full items-center justify-center bg-gradient-to-br from-gray-800 via-gray-800 to-gray-800">
             <StreamCall call={call}>
                 <StreamTheme>
-                    <div className="w-full max-w-5xl p-6 rounded-2xl bg-white/10 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex justify-center items-center min-h-[400px]">
+                    <div className="w-full max-w-5xl p-6 h-full rounded-2xl bg-gray-600  flex justify-center items-center min-h-[400px]">
                         {!isSetupComplete ? (
                             <MeetingSetup
                                 setIsSetupComplete={setIsSetupComplete}

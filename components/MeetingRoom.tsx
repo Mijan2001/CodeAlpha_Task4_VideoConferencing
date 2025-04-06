@@ -50,7 +50,7 @@ const MeetingRoom = () => {
     };
 
     return (
-        <section className="relative h-screen w-full overflow-hidden pt-4 text-white">
+        <section className="relative border-3 border-amber-200 h-screen w-full overflow-hidden pt-4  text-white">
             <div className="relative flex size-full items-center justify-center">
                 <div className=" flex size-full max-w-[1000px] items-center">
                     <CallLayout />
@@ -88,7 +88,7 @@ const MeetingRoom = () => {
                                     >
                                         {item}
                                     </DropdownMenuItem>
-                                    <DropdownMenuSeparator className="border-dark-1" />
+                                    <DropdownMenuSeparator className="border-dark-1 " />
                                 </div>
                             )
                         )}

@@ -134,3 +134,26 @@
     background: #4c5a96;
     height: 2px;
 }
+
+.cl-internal-1i0v6m5 {
+    color: #fff;
+}
+.cl-internal-1i0v6m5:hover {
+    color: #928484fd;
+}
+.cl-internal-11p3n5g {
+    color: rgb(11, 122, 249);
+}
+
+.cl-internal-zpbffa {
+    color: #a1d6d2;
+}
+
+/* camera borders styling=============  */
+
+.str-video__video-preview-container {
+    border-block-start: none;
+    border-block-end: none;
+    border-inline-start: none;
+    border-inline-end: none;
+}
